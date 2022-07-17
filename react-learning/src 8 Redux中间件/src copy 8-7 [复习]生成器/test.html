@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // function* createGenerator() {
+        //     console.log("开始");
+        //     let result = yield 1;
+        //     console.log("运行1", result);
+        //     result = yield 2;
+        //     console.log("运行2", result);
+        //     result = yield 3;
+        //     console.log("运行3", result);
+        //     return "结束";
+        // }
+
+
+        function asyncData() {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    resolve('data');
+                }, 2000);
+            })
+        }
+        // asyncData().then(ret => console.log(ret));
+
+
+        // function* task() {
+        //     console.log("开始获取数据");
+        //     const data = yield asyncData();
+        //     console.log("获取到数据", data);
+        // }
+        // const it = task();
+        // const ret = it.next();
+        // ret.value.then(res => { it.next(res) });
+
+
+        function* task() {
+            console.log("开始获取数据");
+            const data = yield asyncData();
+            console.log("获取到数据1", data);
+            const data1 = yield asyncData();
+            console.log("获取到数据2", data1);
+            const data2 = yield 3;
+            console.log("获取到数据3", data2);
+        }
+        function run(generatoeFunction) {
+            const generator = generatoeFunction();
+            next();
+
+            function next(nextValue) {
+                const result = generator.next(nextValue);
+                if (result.done) {
+                    //迭代结束了
+                    return;
+                }
+                const value = result.value;
+                if (typeof value.then === "function") {
+                    //是一个promise
+                    value.then(data => next(data))
+                } else {
+                    next(result.value);
+                }
+            }
+        }
+        run(task);
+    </script>
+</body>
+
+</html>

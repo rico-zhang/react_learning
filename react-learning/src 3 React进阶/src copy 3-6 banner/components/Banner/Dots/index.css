@@ -1,0 +1,23 @@
+.dots {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    text-align: center;
+}
+
+.dots span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dots span.active{
+    background-color: #f40;
+}
+
+.dots span:not(:first-of-type){
+    margin-left: 10px;
+}

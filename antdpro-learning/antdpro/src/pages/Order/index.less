@@ -1,0 +1,38 @@
+@import '~antd/lib/style/themes/default.less';
+
+.order-title {
+  color: red;
+  background-color: @primary-color;
+}
+#test {
+  color: blue;
+}
+&:global(.tt .t) {
+  color: #000;
+}
+.x {
+  &:global(.tt .t) {
+    color: #000;
+  }
+  :global {
+    .a {
+      color: red;
+      .b {
+        color: #000;
+        div {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.a {
+  color: red;
+  .b {
+    color: #000;
+    div {
+      color: #000;
+    }
+  }
+}

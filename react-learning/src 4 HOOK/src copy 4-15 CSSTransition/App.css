@@ -1,0 +1,18 @@
+.app {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.container {
+    position: relative;
+}
+
+.container .title {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.exit-done {
+    display: none;
+}

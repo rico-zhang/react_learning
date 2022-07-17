@@ -1,0 +1,41 @@
+nav a.active {
+  color: red;
+}
+
+.main {
+  width: 600px;
+  margin: 0 auto;
+  border: 1px solid lightblue;
+}
+nav {
+  text-align: center;
+  background-color: lightcyan;
+}
+nav a {
+  margin-right: 20px;
+}
+.page-container {
+  height: 400px;
+  position: relative;
+}
+.page {
+  text-align: center;
+  font-size: 30px;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.page-home {
+  background-color: lightyellow;
+}
+
+.page-news {
+  background-color: lightblue;
+}
+
+.page-personal {
+  background-color: lightgray;
+}

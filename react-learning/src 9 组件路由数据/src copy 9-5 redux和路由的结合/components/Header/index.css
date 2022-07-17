@@ -1,0 +1,20 @@
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title .logo {
+    margin-left: 20px;
+}
+
+.title .navs {
+    margin-right: 20px;
+    display: flex;
+}
+.title .navs div:first-of-type{
+    flex: auto;
+}
+
+.title .navs div:not(:first-of-type) {
+    width: 40px;
+}

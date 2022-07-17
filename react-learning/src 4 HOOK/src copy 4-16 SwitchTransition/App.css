@@ -1,0 +1,26 @@
+.app {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.enter{
+    opacity: 0;
+    transform: translateX(300px);
+}
+
+.enter-active{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 2s;
+}
+
+.exit{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.exit-active{
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: 2s;
+}

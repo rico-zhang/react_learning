@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //       const date = new Date()
+      // undefined
+      // date.setMonth(4)
+      // 1652415940477
+      // date.setDate(1)
+      // 1651379140477
+      // date.toLocaleString()
+      // '2022/5/1 12:25:40'
+      // date.getDay()
+      // 0
+      // date.setDate(-5)
+      // 1650860740477
+      // date.toDateString()
+      // 'Mon Apr 25 2022'
+      // date.toLocaleString()
+      // '2022/4/25 12:25:40'
+      // date.setDate(42)
+      // 1652329540477
+      // date.setDate(1)
+      // 1651379140477
+      // date.setDate(-5)
+      // 1650860740477
+      // date.toLocaleString()
+      // '2022/4/25 12:25:40'
+      // date.setDate(date.getDate()+42)
+      // 1654489540477
+      // date.toLocaleString()
+      // '2022/6/6 12:25:40'
+
+      function getStartEndDay(year, month) {
+        const date = new Date();
+        date.setFullYear(year);
+        date.setMonth(month - 1); //月份是以下标开始算的 0代表1月 11代表12月
+        date.setDate(1); //设置到当前月份1号
+        let weekDay = date.getDay(); //周几 0表示周日 1-6表示周一到周六
+        if (weekDay === 0) {
+          weekDay = 7;
+        }
+        const diff = 2 - weekDay;
+        date.setDate(diff); //1:本月第一天 0:上个月最后一天 -1:上个月倒数第二天 以此类推
+        const start = date.toLocaleDateString();
+        const startDate = new Date(date);
+        date.setDate(date.getDate() + 41);
+        const end = date.toLocaleDateString();
+        console.log(start, end, startDate);
+      }
+    </script>
+  </body>
+</html>

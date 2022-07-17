@@ -1,0 +1,46 @@
+.app {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.container {
+    position: relative;
+}
+
+.container .title {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.enter {
+    opacity: 0;
+    transform: translateX(300px);
+}
+
+.enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 2s;
+}
+
+.enter-done {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.exit-active {
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: all 2s;
+}
+
+.exit-done {
+    opacity: 0;
+    display: none;
+}

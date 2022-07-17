@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .header {
+    height: 40px;
+    background-color: #555;
+}
+
+.container .middle{
+    flex: 1;
+    display: flex;
+}
+.container .middle .menus{
+    width: 150px;
+    background-color: #242424;
+}
+.container .middle .content{
+    flex: 1;
+    background-color: chocolate;
+}
+.container .footer{
+    height: 30px;
+    background:green;
+}

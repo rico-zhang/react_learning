@@ -1,0 +1,31 @@
+.arrow {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrow span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 26px;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+}
+
+.arrow span:hover{
+    color: #f40; 
+}
+.arrow span.arrow-left{
+    left: 0;
+}
+.arrow span.arrow-right{
+    right: 0;
+}

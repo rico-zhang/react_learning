@@ -1,0 +1,17 @@
+.three-layout {
+    display: flex;
+    height: 300px;
+}
+
+.three-layout .main {
+    flex: auto;
+    order: 0;
+}
+
+.three-layout .aside-left {
+    order: -1;
+}
+
+.three-layout .aside-right {
+    order: 1;
+}
