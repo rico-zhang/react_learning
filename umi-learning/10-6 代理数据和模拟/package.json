@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@umijs/preset-react": "^1.8.31",
+    "umi": "^3.5.23"
+  },
+  "dependencies": {
+    "mockjs": "^1.1.0"
+  }
+}
